@@ -26,3 +26,19 @@ module "s3-webapp" {
   prefix = var.prefix
   version = "1.0.0"
 }
+
+module "s3-webapp-dot1" {
+  source  = "app.terraform.io/jtz-sb1/s3-webapp/aws"
+  version = "1.0.1"
+  name        = "${var.name}-dot1"
+  region = var.region
+  prefix = var.prefix
+}
+
+module "s3-webapp-dot3" {
+  source  = "app.terraform.io/jtz-sb1/s3-webapp/aws"
+  version = "1.0.3"
+  name        = "${var.name}-dot3"
+  region = var.region
+  prefix = var.prefix
+}
