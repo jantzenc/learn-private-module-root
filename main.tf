@@ -5,7 +5,15 @@ terraform {
       version = "~> 4.0.0"
     }
   }
+  cloud {
+    organization = "jtz-sb1"
+
+    workspaces {
+      name = "learn-private-module-root"
+    }
+  }
 }
+
 
 provider "aws" {
   region = var.region
